@@ -1,18 +1,52 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+
+  <div
+  v-for="user,index in users"
+  :key="index"
+  >
+
+    <User 
+      :user="user"
+    />
+
   </div>
+  
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+function fazGet(url)
+{
+    let request = new XMLHttpRequest()
+    request.open("GET",url,false);
+    request.send()
+    return request.responseText
 }
+
+function main()
+{
+    let data = fazGet("https://5ff75c21e7164b0017e1a82d.mockapi.io/api/v1/empreendimentos")
+    let usuarios = JSON.parse(data)
+    console.log(usuarios)
+    return usuarios
+}
+
+//main();
+
+import User from '../components/Users/User.vue'
+
+  export default {
+    name: 'Home',
+
+    components: {
+      User
+    },
+    data(){
+      return{
+        users: main()
+      }
+    }
+  }
+
 </script>
