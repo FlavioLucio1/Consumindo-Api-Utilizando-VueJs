@@ -27,9 +27,8 @@ function GetAPI(url)
 function main()
 {
     let data = GetAPI("https://5ff75c21e7164b0017e1a82d.mockapi.io/api/v1/empreendimentos")
-    let usuarios = JSON.parse(data)
-    console.log(usuarios)
-    return usuarios
+    let usersData = JSON.parse(data)
+    return usersData
 }
 
 //main();

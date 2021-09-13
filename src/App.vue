@@ -12,9 +12,6 @@
           <v-list-item-title class="text-h6">
             Menu
           </v-list-item-title>
-         <!-- <v-list-item-subtitle>
-            Menu do aplicativo
-          </v-list-item-subtitle> -->
         </v-list-item-content>
       </v-list-item>
 
@@ -43,13 +40,6 @@
 
     <!-- End menu -->
 
-
-  <!--  <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Lista de empreendimentos</v-toolbar-title>
-    </v-app-bar>
--->
 
       <!-- Start Top Bar -->
      <v-app-bar
