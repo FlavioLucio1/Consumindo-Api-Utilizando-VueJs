@@ -1,22 +1,22 @@
 <template>
-<div>
+  <div>
 
-  <div
-  v-for="user,index in users"
-  :key="index"
-  >
+    <div
+    v-for="user,index in users"
+    :key="index"
+    >
 
-    <User 
-      :user="user"
-    />
+      <User 
+        :user="user"
+      />
 
+    </div>
+    
   </div>
-  
-</div>
 </template>
 
 <script>
-function fazGet(url)
+function GetAPI(url)
 {
     let request = new XMLHttpRequest()
     request.open("GET",url,false);
@@ -26,7 +26,7 @@ function fazGet(url)
 
 function main()
 {
-    let data = fazGet("https://5ff75c21e7164b0017e1a82d.mockapi.io/api/v1/empreendimentos")
+    let data = GetAPI("https://5ff75c21e7164b0017e1a82d.mockapi.io/api/v1/empreendimentos")
     let usuarios = JSON.parse(data)
     console.log(usuarios)
     return usuarios

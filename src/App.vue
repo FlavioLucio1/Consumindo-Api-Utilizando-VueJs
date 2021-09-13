@@ -67,22 +67,10 @@
       </template>
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+     
+      <v-app-bar-title class="my-9 justify-center text-no-wrap"><b>API de Empreendimentos</b></v-app-bar-title>
+      
 
-      <v-app-bar-title>Empreendimentos API</v-app-bar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
     </v-app-bar>
 
 
@@ -107,3 +95,9 @@
     }),
   }
 </script>
+
+<style>
+.v-app-bar-title__content{
+  width: 300px !important;
+}
+</style>
