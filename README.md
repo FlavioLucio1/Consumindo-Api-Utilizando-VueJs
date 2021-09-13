@@ -1,4 +1,7 @@
-# desafio
+# Sobre
+
+Este é um projeto criado para um processo seletivo em que o objetivo era consumir uma API utilizando o Vue.js e o Vuetify.
+
 
 ## Project setup
 ```
